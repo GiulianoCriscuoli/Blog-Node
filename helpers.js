@@ -1,0 +1,2 @@
+exports.defaultTitle = "Home";
+

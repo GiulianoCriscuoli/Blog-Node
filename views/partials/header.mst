@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <title>{{h.defaultTitle}}</title>
+    <head>
+    <body>
+        <h1>Cabeçalho</h1>
+        
+    </body>
+
+</html>
