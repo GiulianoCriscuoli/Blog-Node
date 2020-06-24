@@ -8,6 +8,7 @@ const app = express();
 
 
 app.use(express.json());
+app.use(express.urlencoded({ extended:true }));
 
 app.use((req, res, next) => {
 
@@ -23,7 +24,7 @@ app.use(errorHandler.notFound);
 
 
 app.engine('mst', mustache(__dirname + '/views/partials', '.mst'));
-app.get('view engine', 'mst');
-app.get('views', __dirname + '/views');
+app.set('view engine', 'mst');
+app.set('views', __dirname + '/views');
 
 module.exports = app;
