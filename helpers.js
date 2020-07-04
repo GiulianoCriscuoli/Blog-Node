@@ -1,6 +1,7 @@
-exports.defaultTitle = "Home";
+exports.defaultTitle = "Home"; //menu da tela principal
 
-exports.menu = [
+
+exports.menu = [  //menu da tela principal
 
     {name:'Home', slug:'/'},
     {name:'Login', slug:'/login'},

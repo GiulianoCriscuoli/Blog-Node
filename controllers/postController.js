@@ -11,6 +11,8 @@ exports.addAction = async (req, res) => {
     
  const post = new Post(req.body);
  await post.save();
+
+ req.flash('success', 'Post salvo com sucesso!');
  res.redirect('/');
     
 };

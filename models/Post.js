@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
+// criando o omodelo do banco de dados
+
 const postSchema = new mongoose.Schema({
 
     title: {

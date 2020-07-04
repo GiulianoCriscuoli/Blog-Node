@@ -2,10 +2,7 @@
 
 <h1>Página home</h1>
 
-<ul>
-{{#h.menu}}
 
-    <li><a href="{{slug}}">{{name}}</a></li>
 
-{{/ h.menu}}
-</ul>
+</body>
+</html>
