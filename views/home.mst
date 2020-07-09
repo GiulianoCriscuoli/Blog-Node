@@ -2,6 +2,15 @@
 
 <h1>Página home</h1>
 
+{{#posts}}
+
+    <h3>{{title}}</h3>
+    <p>{{body}}</p>
+
+    <hr/>
+
+{{/posts}}
+
 
 
 </body>
