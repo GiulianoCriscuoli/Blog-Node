@@ -5,15 +5,16 @@ const Post = mongoose.model("Post");
 
 exports.index =  async (req, res) => {
 
-    let responseJson = {
+  let responseJson = { // recebe um json com o array posts.
 
-        posts:[]
+    posts: [] // recebe os posts
 
-    };
+  }
 
-    const posts = await Post.find(); //find() retorna toda a lista no mongo
-    responseJson.posts = posts;
+  const posts = await Post.find(); // find é uma função do mongoDB para lsitar todos os posts
 
-    res.render('home', responseJson);
+  responseJson.posts = posts;
+
+  res.render('home', responseJson);
 
 };

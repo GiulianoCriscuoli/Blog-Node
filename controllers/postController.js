@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Post = mongoose.model('Post');
+const slug = require('slug');
 
 
 exports.add = (req, res) => {
@@ -28,3 +29,4 @@ exports.addAction = async (req, res) => {
  res.redirect('/');
     
 };
+

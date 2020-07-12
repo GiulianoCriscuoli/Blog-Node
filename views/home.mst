@@ -4,13 +4,10 @@
 
 {{#posts}}
 
-    <h3>{{title}}</h3>
+    <h1><a href="/post/{{slug}}">{{title}}</a></h1>
     <p>{{body}}</p>
 
-    <hr/>
-
 {{/posts}}
-
 
 
 </body>
