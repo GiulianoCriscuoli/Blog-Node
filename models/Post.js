@@ -25,7 +25,7 @@ const postSchema = new mongoose.Schema({
 
 // criando o slug
 
-postSchema.pre('save', function(next) { // essa função ocm next é um middleware 
+postSchema.pre('save', function(next) { // essa função com next é um middleware 
 
     if(this.isModified('title') === true) { // se esse objeto title foi modificado
 
