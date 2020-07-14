@@ -21,6 +21,12 @@
         <br/>
 
     <label>
+    Tags: <small>(Separar por vígulas)</small>
+
+    <input type="text" name="tags" />
+    </label>
+
+    <label>
 
     <input type="submit" value="Enviar"/>
 

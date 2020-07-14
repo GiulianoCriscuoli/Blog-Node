@@ -13,7 +13,7 @@ exports.index =  async (req, res) => {
 
   const posts = await Post.find(); // find é uma função do mongoDB para lsitar todos os posts
 
-  responseJson.posts = posts;
+  responseJson.posts = posts; // response.posts recebe os posts para listar
 
   res.render('home', responseJson);
 

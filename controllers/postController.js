@@ -12,6 +12,8 @@ exports.add = (req, res) => {
 // adiciona via post o que foi mandado no corpo da requisição para o BD
 
 exports.addAction = async (req, res) => {
+
+    req.body.tags = req.body.tags.split(',').map(tag => tag.trim());
     
  const post = new Post(req.body);
 
@@ -42,31 +44,42 @@ exports.edit = async(req, res) => {
 
     });
 
-    res.render('postEdit', post);
+    res.render('postEdit', { post } );
 
 }
 
 exports.editAction = async(req, res) => {
 
-    // findOneAndUpdate recebe 3 parâmetros
-    // 1. recebe o slug que foi solecionado slug: req.params.slug
-    // 2. recebe o req.body que foi modificado
-    // 3. um objeto com 2 propriedades: new: true (significa que recebe um novo registro)
-    // runValidators: true (faz a validação do novo registro)
+    try {
 
-    const post = await Post.findOneAndUpdate(   // função que recebe um registro e atualiza
-        {slug: req.params.slug},
-        req.body,
-        {
-            new: true,
-            runValidators: true
+        req.body.slug = slug(req.body.title, {lower: true}); // Ele passa o slug para o body
 
-        }
-        
+        // findOneAndUpdate recebe 3 parâmetros
+        // 1. recebe o slug que foi solecionado slug: req.params.slug
+        // 2. recebe o req.body que foi modificado
+        // 3. um objeto com 2 propriedades: new: true (significa que recebe um novo registro)
+        // runValidators: true (faz a validação do novo registro)
+    
+        const post = await Post.findOneAndUpdate(   // função que recebe um registro e atualiza
+            {slug: req.params.slug}, // recebe o slug a ser atualizado
+            req.body, // recebe a atualização
+            {
+                new: true, // novo registro atualizado
+                runValidators: true // validando os campos atualizados
+    
+            }
+            
         ); 
+        
+    } catch(error) {
 
-        req.flash('success', 'Post atualizado com sucesso!');
-        res.redirect('/');
+        req.flash('error', 'O post não foi atualizado! Tenve novamente.');
+        res.redirect('/post/'+ req.params.slug +'/edit');
+
+    }
+   
+    req.flash('success', 'Post atualizado com sucesso!'); // mensagem flash de sucesso
+        res.redirect('/'); // redireciona para a rota default
         
 }
 
