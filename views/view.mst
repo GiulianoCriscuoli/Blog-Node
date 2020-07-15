@@ -1,0 +1,12 @@
+{{> header}}
+
+{{#post}}
+
+<h1>{{title}}</h1>
+
+<p>{{body}}</p>
+
+<small>{{tags}}</small>
+
+
+{{/post}}

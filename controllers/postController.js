@@ -2,6 +2,12 @@ const mongoose = require('mongoose');
 const Post = mongoose.model('Post');
 const slug = require('slug');
 
+exports.view = async(req, res) => {
+    const post = await Post.findOne({slug: req.params.slug});
+
+    res.render('view', {post});
+}
+
 // Acessa o postAdd
 
 exports.add = (req, res) => {
@@ -11,7 +17,7 @@ exports.add = (req, res) => {
 
 // adiciona via post o que foi mandado no corpo da requisição para o BD
 
-exports.addAction = async (req, res) => {
+exports.addAction = async(req, res) => {
 
  req.body.tags = req.body.tags.split(',').map(tag => tag.trim()); 
     

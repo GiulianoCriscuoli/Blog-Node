@@ -8,6 +8,8 @@
     <p>{{body}}</p>
     <a href="/post/{{slug}}/edit">[ Atualizar o post ]</a>
 
+    <h3>Tags: <small>{{tags}}</small></h3>
+
 {{/posts}}
 
 
