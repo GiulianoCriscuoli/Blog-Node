@@ -13,9 +13,9 @@ exports.add = (req, res) => {
 
 exports.addAction = async (req, res) => {
 
-    req.body.tags = req.body.tags.split(',').map(tag => tag.trim());
+ req.body.tags = req.body.tags.split(',').map(tag => tag.trim()); 
     
- const post = new Post(req.body);
+ const post = new Post(req.body); // cria o novo post
 
     try {
 
@@ -53,6 +53,7 @@ exports.editAction = async(req, res) => {
     try {
 
         req.body.slug = slug(req.body.title, {lower: true}); // Ele passa o slug para o body
+        req.body.tags = req.body.tags.split(',').map(tag => tag.trim()); // Configura as tags, separando as strings por array
 
         // findOneAndUpdate recebe 3 parâmetros
         // 1. recebe o slug que foi solecionado slug: req.params.slug
@@ -73,8 +74,8 @@ exports.editAction = async(req, res) => {
         
     } catch(error) {
 
-        req.flash('error', 'O post não foi atualizado! Tenve novamente.');
-        res.redirect('/post/'+ req.params.slug +'/edit');
+        req.flash('error', 'O post não foi atualizado! Tente novamente.'); // mensagem de erro da atualziação
+        res.redirect('/post/'+ req.params.slug +'/edit'); // redireciona ao edit
 
     }
    

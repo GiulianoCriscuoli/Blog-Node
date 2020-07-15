@@ -15,7 +15,15 @@
     <label>
 
     Corpo
-    <textarea name="body" value="{{post.body}}"></textarea>  
+    <textarea  name="body" >{{post.body}}</textarea>  
+
+    </label>
+        <br/>
+
+    <label>
+
+    Tag: <small>(Separar por vírgula)</small>
+    <input type="text" name="tags" value={{post.tags}} />
 
     </label>
         <br/>
