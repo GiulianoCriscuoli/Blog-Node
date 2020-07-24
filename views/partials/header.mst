@@ -1,8 +1,10 @@
 <html>
 <head>
     <title>{{h.defaultTitle}}</title>
+    <link rel="stylesheet" href="/assets/css/template.css" />
 </head>
  <body>
+ <header>
     <h1>Cabeçalho</h1>
         
     <ul>
@@ -14,21 +16,20 @@
     {{/ h.menu}}
 
     </ul>
+   </header>
 
-<hr/>
     {{#flashes}} <!-- #flashes verifica se existe flash -->
+   
         {{#success}}
-
-        <div>{{.}}</div> <!-- Pega todas as mensagens dentro de success -->
-
+         <div class="warning">{{.}}</div> <!-- Pega todas as mensagens dentro de success -->
         {{/success}}
 
         {{#error}}
-            <div>{{.}}</div>
+         <div class="warning">{{.}}</div>
         {{/error}}
 
         {{#info}}
-            <div>{{.}}</div>
+         <div class="warning">{{.}}</div>
         {{/info}}
-
+    </div>
     {{/flashes}}
