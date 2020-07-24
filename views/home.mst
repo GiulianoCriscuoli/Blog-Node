@@ -1,12 +1,12 @@
 {{> header}}
 
-<h1>Posts</h1>
+<h1 class="title-blog">Posts Recentes</h1>
 
 {{#posts}}
 
     <div class="post">
 
-    <h1><a href="/post/{{slug}}">{{title}}</a></h1>
+    <h1 class="title-post"><a href="/post/{{slug}}" class="title-hover">{{title}}</a></h1>
     <div class="body-p"><p>{{body}}</div></p>
     <div class="buttons">
     <a href="/post/{{slug}}/edit" class="post-button">Atualizar o post</a>
@@ -16,7 +16,7 @@
 
     </div>
 
-     <h3>Tags: <small>{{tags}}</small></h3>
+     <h3 class="tag-post">Tags: <small>{{tags}}</small></h3>
    
     </div>
 

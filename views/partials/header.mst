@@ -19,7 +19,7 @@
     </ul>
    </header>
 
-    {{#flashes}} <!-- #flashes verifica se existe flash -->
+    {{#flashes}} <!-- #flashes verifica se existe algum flash a ser retornado -->
    
         {{#success}}
          <div class="warning">{{.}}</div> <!-- Pega todas as mensagens dentro de success -->

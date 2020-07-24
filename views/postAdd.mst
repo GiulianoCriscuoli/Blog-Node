@@ -1,6 +1,6 @@
 {{> header}}
 
-<h1> Adicionar post</h1>
+<h1 class="title-blog"> Adicionar post</h1>
 
 <form method="POST">
 
@@ -26,6 +26,7 @@
     <input type="text" name="tags" />
     </label>
 
+        <br/>
     <label>
 
     <input type="submit" value="Enviar"/>

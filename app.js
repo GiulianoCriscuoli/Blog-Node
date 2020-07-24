@@ -51,7 +51,7 @@ app.use('/', router);
 app.use(errorHandler.notFound);
 
 
-//configurando a engine
+//configurando a engine mustache
 
 app.engine('mst', mustache(__dirname + '/views/partials', '.mst'));
 app.set('view engine', 'mst');

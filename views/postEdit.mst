@@ -1,6 +1,6 @@
 {{> header}}
 
-<h1> Editar post</h1>
+<h1 class="title-blog"> Editar post</h1>
 
 <form method="POST">
 
