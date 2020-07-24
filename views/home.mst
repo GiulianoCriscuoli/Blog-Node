@@ -7,6 +7,9 @@
     <div class="post">
 
     <h1 class="title-post"><a href="/post/{{slug}}" class="title-hover">{{title}}</a></h1>
+    {{#photo}}
+    <img src="/media/{{photo}}"/>
+    {{/photo}}
     <div class="body-p"><p>{{body}}</div></p>
     <div class="buttons">
     <a href="/post/{{slug}}/edit" class="post-button">Atualizar o post</a>

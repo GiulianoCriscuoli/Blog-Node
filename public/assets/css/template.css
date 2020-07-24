@@ -161,6 +161,7 @@ cursor:pointer;
 }
 input[type=submit]:hover {
 background-color:rgba(11, 80, 14, 0.8);
+box-shadow: 0px 0px 10px #0fac29;
 transition: all 0.2s linear;
 color: #FFF;
 cursor:pointer;

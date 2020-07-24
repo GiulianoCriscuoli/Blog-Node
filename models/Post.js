@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 // criando o modelo do banco de dados
 
 const postSchema = new mongoose.Schema({
-
+    photo: String,
     title: {
 
         type: String,
