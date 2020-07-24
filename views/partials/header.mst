@@ -5,13 +5,14 @@
 </head>
  <body>
  <header>
-    <h1>Cabeçalho</h1>
-        
+
+    <h1 class="title-blog"><div class="green">Node</div>Blog</h1>
+    
     <ul>
 
     {{#h.menu}}
 
-    <li><a href="{{slug}}">{{name}}</a></li>
+    <li><a href="{{slug}}" class="menu-hover">{{name}}</a></li>
 
     {{/ h.menu}}
 

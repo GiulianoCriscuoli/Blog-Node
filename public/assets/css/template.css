@@ -3,23 +3,26 @@
 body {
 font-family: 'Roboto', sans-serif;
 font-size:15px;
-background-color:#EEE;
+background-color:rgb(26, 24, 24);
 margin:0;
+padding: 0;
 }
 header {
-background-color:#DDD;
 padding:10px;
-border-bottom:1px solid #CCC;
+border-bottom: 1px solid #3a3838;
 }
-header h1 {
-text-align:center;
+.title-blog  {
+
+color:rgb(255, 255, 255);
+font-size: 30px;
+text-align: center;
+display:flex;
+justify-content: center;
+width: 100%;
+    
 }
-a {
-color:#000;
-text-decoration:none;
-}
-a:hover {
-text-decoration:underline;
+h1 .green {
+color:rgb(17, 141, 24);  
 }
 ul, li {
 margin:0;
@@ -34,9 +37,49 @@ align-items:center;
 li {
 padding:10px;
 }
+a {
+color:rgb(224, 220, 220);
+text-decoration:none;
+font-size: 18px;
+text-transform: uppercase;
+display: block;
+}
+.menu-hover:hover {
+    color:#0fac29;
+    transition: all 0.2s linear;
+}
+.post .buttons {
+
+    display:flex;  
+
+}
+
+.post-button {
+color:#FFF;
+padding-bottom: 20px;
+font-size: 12px;
+flex: 1;
+text-align: center;
+background-color:rgb(26, 24, 24);
+margin:0 10px;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0px 0px 4px #0fac29;
+
+}
+
+.post-button:hover {
+    
+background-color:rgba(11, 80, 14, 0.8);
+transition: all 0.2s linear;
+box-shadow: none;
+    
+}
+
+
 .warning {
-border:2px solid #5555FF;
-background-color:#0000FF;
+border:2px solid #0fac29;
+background-color:rgb(11, 80, 14);
 color:#FFF;
 padding:10px 20px;
 border-radius:5px;
@@ -44,14 +87,22 @@ border-radius:5px;
 .post {
 width:300px;
 display:inline-block;
-box-shadow:0px 0px 5px #999;
+box-shadow:0px 0px 10px #0fac29;
 padding:10px;
 margin:20px;
 border-radius:5px;
 overflow:hidden;
+background-color: #3a3838;
 }
 .post img {
 max-width:100%;
+}
+
+.post .body-p p {
+    
+    color:#FFF;
+    font-size: 18px;
+
 }
 form {
 margin:20px;

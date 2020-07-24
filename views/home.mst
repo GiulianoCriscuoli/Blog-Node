@@ -1,17 +1,23 @@
 {{> header}}
 
-<h1>Página home</h1>
+<h1>Posts</h1>
 
 {{#posts}}
 
     <div class="post">
 
     <h1><a href="/post/{{slug}}">{{title}}</a></h1>
-    <p>{{body}}</p>
-    <a href="/post/{{slug}}/edit">[ Atualizar o post ]</a>
+    <div class="body-p"><p>{{body}}</div></p>
+    <div class="buttons">
+    <a href="/post/{{slug}}/edit" class="post-button">Atualizar o post</a>
+    <a href="#" class="post-button">Excluir</a>
 
-    <h3>Tags: <small>{{tags}}</small></h3>
+     
 
+    </div>
+
+     <h3>Tags: <small>{{tags}}</small></h3>
+   
     </div>
 
 {{/posts}}

@@ -33,7 +33,7 @@ postSchema.pre('save', function(next) { // essa função com next é um middlewa
         // this.title, que éo title atual a ser modificado e
         // {lower:true} recebe o slug em minúsculo
 
-        this.slug = slug(this.title, {lower: true}); 
+        this.slug = slug(this.title, {lower: true});
        
         // ele fará a validação do slug gerado e irá para o próximo procedimento
 
