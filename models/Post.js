@@ -25,7 +25,7 @@ const postSchema = new mongoose.Schema({
 
 // criando o slug
 
-postSchema.pre('save', function(next) { // essa função com next é um middleware 
+postSchema.pre('save', async function(next) { // essa função com next é um middleware 
 
     if(this.isModified('title') === true) { // se esse objeto title foi modificado
 
@@ -33,17 +33,23 @@ postSchema.pre('save', function(next) { // essa função com next é um middlewa
         // this.title, que éo title atual a ser modificado e
         // {lower:true} recebe o slug em minúsculo
 
-        this.slug = slug(this.title, {lower: true});
-       
-        // ele fará a validação do slug gerado e irá para o próximo procedimento
+        this.slug = slug(this.title, {lower: true}); // ele fará a validação do slug gerado
 
-        next(); 
-        
+        const slugRegex = RegExp(`^(${this.slug})((-[0,9]{1,}$)?)$`, 'i'); // regex do slug
+
+        //coloca os slug no construtor para ser enviado antes da criação esse padrão de regex
+
+        const slugPost = await this.constructor.find({slug: slugRegex});
+
+        if(slugPost.length > 0) { //se tiver algum slug existente, atribuirá esse slug + 1
+
+            this.slug = `${this.slug}-${slugPost.length + 1}`;
+
+        }
+
+        next();   
+
     }
-  
-// postSchema  chama a função de pre
-// função de pre(antes) recebe 2 parâmetros
-// 'save' e uma função que fará as validações do slug gerado
 
 });
 

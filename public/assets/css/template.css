@@ -7,12 +7,13 @@ background-color:rgb(26, 24, 24);
 margin:0;
 padding: 0;
 }
+
 header {
 padding:10px;
 border-bottom: 1px solid #3a3838;
 }
-.title-blog  {
 
+.title-blog  {
 color:rgb(255, 255, 255);
 font-size: 30px;
 text-align: center;
@@ -21,9 +22,11 @@ justify-content: center;
 width: 100%;
     
 }
+
 h1 .green {
 color:rgb(17, 141, 24);  
 }
+
 ul, li {
 margin:0;
 padding:0;
@@ -34,9 +37,11 @@ display:flex;
 justify-content:center;
 align-items:center;
 }
+
 li {
 padding:10px;
 }
+
 a {
 color:rgb(224, 220, 220);
 text-decoration:none;
@@ -44,6 +49,7 @@ font-size: 18px;
 text-transform: uppercase;
 display: block;
 }
+
 .menu-hover:hover {
     color:#0fac29;
     transition: all 0.2s linear;
@@ -75,8 +81,6 @@ transition: all 0.2s linear;
 box-shadow: none;
     
 }
-
-
 .warning {
 border:2px solid #0fac29;
 background-color:rgb(11, 80, 14);
@@ -84,23 +88,26 @@ color:#FFF;
 padding:10px 20px;
 border-radius:5px;
 }
+
 .post {
-width:300px;
+max-width:300px;
 display:inline-block;
 box-shadow:0px 0px 10px #0fac29;
 padding:10px;
 margin:50px;
 border-radius:5px;
-overflow:hidden;
 background-color: #3a3838;
 }
-.post img {
-max-width:100%;
-}
 
+.post img {
+
+max-width:100%;
+
+}
 .title-post {
 
-    margin-left: 19px;
+margin-left: 19px;
+
 }
 
 .title-post .title-hover:hover {
@@ -109,7 +116,6 @@ color:#0fac29;
 transition: all 0.2s linear;
 
 }
-
 .post .body-p p {
     
 color:#FFF;
@@ -120,8 +126,9 @@ margin-left: 18px;
 
 .tag-post {
 
-    color: #FFF;
+color: #FFF;
     margin-left: 18px;
+
 }
 form {
 margin:20px auto;
@@ -135,6 +142,7 @@ width: 50%;
 box-shadow: 0px 0px 10px #0fac29;
 
 }
+
 label {
 display:inline-block;
 margin:10px 0;
@@ -142,6 +150,7 @@ color: #FFF;
 font-size: 18px;
 
 }
+
 input, textarea {
 display:block;
 padding:8px 15px;
@@ -152,13 +161,16 @@ resize:none;
 margin-top:5px;
 width:400px;
 }
+
 textarea {
 height:200px;
 }
+
 input[type=submit]{
 border-radius: 10px;    
 cursor:pointer;
 }
+
 input[type=submit]:hover {
 background-color:rgba(11, 80, 14, 0.8);
 box-shadow: 0px 0px 10px #0fac29;
@@ -166,15 +178,18 @@ transition: all 0.2s linear;
 color: #FFF;
 cursor:pointer;
 }
+
 .tags {
 display:flex;
 justify-content: center;
 align-items:center;
 margin-top:10px;
 }
+
 .tags .tag {
 padding:10px;
 }
+
 .tag.selected a {
 color:#FF0000;
 }

@@ -14,7 +14,7 @@ const app = express();
 // configuração do uso de json nas requisições
 
 app.use(express.json());
-app.use(express.urlencoded({ extended:true }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/public'));
 

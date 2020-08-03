@@ -23,6 +23,10 @@ router.post('/post/:slug/edit',
     postController.editAction
 );
 
+router.get('/post/:slug/delete', postController.delete);
+
 router.get('/post/:slug', postController.view);
+
+
 
 module.exports = router;

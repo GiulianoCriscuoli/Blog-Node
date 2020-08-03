@@ -90,3 +90,22 @@ exports.editAction = async(req, res) => {
         
 }
 
+exports.delete = async(req, res) => {
+
+    let deletePost = req.params.slug;
+
+    try {
+
+        await Post.findOneAndDelete({slug: deletePost});
+
+    } catch(error) {
+
+        req.flash('erro', 'Erro ao deletar o post! Tente novamente');
+        res.redirect('/post'+ req.params.slug + '/delete');
+
+    }
+
+    req.flash('success', 'Sucesso ao excluir o post');
+    res.redirect('/');
+}
+
