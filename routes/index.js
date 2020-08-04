@@ -4,7 +4,6 @@ const homeController = require('../controllers/homeController');
 const postController = require('../controllers/postController');
 const imageMiddleware = require('../middlewares/imageMiddleware');
 
-
 // rotas configuradas no sistema
 
 router.get('/', homeController.index);

@@ -184,12 +184,14 @@ display:flex;
 justify-content: center;
 align-items:center;
 margin-top:10px;
+
 }
 
 .tags .tag {
 padding:10px;
+color: #CCC;
 }
 
 .tag.selected a {
-color:#FF0000;
+    color: #0fac29;
 }

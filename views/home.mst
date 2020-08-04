@@ -1,5 +1,14 @@
 {{> header}}
 
+<div class="tags">
+    {{#tags}}
+        <div class="tag {{class}}"><a href="/?t={{_id}}">{{_id}} ({{count}})</a></div>
+    {{/tags}}
+
+</div>
+
+<div>
+
 <h1 class="title-blog">Posts Recentes</h1>
 
 {{#posts}}

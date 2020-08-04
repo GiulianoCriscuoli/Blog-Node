@@ -27,7 +27,6 @@ exports.addAction = async(req, res) => {
 
         await post.save(); // salva o post
 
-
     } catch(error) {
 
         req.flash('error', 'Deu erro ao salvar o post');
