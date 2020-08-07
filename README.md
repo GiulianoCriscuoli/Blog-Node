@@ -1,4 +1,4 @@
-# Projeto: Proffy
+# Projeto: BlogNode
 
  ![](gifs/blognode.png)
 
