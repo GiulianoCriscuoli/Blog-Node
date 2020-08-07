@@ -28,7 +28,7 @@ Backend
 
 3 - npm install express.
 
-4 - npm run dev Para fazer o servidor funcionar.
+4 - npm run dev para fazer o servidor funcionar.
 
 5 - servidor na porta: localhost:7775
 
