@@ -3,6 +3,7 @@ const router = express.Router();
 const homeController = require('../controllers/homeController');
 const postController = require('../controllers/postController');
 const imageMiddleware = require('../middlewares/imageMiddleware');
+const userController = require('../controllers/userController');
 
 // rotas configuradas no sistema
 
@@ -25,6 +26,12 @@ router.post('/post/:slug/edit',
 router.get('/post/:slug/delete', postController.delete);
 
 router.get('/post/:slug', postController.view);
+
+router.get('/users/register', userController.register);
+router.post('/users/register', userController.registerAction);
+
+router.get('/users/login', userController.login);
+router.get('/users/login', userController.loginAction);
 
 
 

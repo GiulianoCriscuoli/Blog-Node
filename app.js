@@ -6,6 +6,9 @@ const errorHandler = require('./handlers/errorHandler');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('express-flash');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
  
 // configurações do express
 
@@ -40,7 +43,18 @@ app.use((req, res, next) => {
 
 });
 
+// configuração da inicialização e da sessão
 
+app.use(passport.initialize());
+app.use(passport.session());
+
+// puxando o model Users para fazer a configuração de autenticação
+// passport faz a serialização e a deserialização
+
+const Users = require('./models/Users');
+passport.use(new LocalStrategy(Users.authenticate()));
+passport.serializeUser(Users.serializeUser());
+passport.deserializeUser(Users.deserializeUser());
 
 // configuração das rotas
 

@@ -11,6 +11,14 @@ padding: 0;
 header {
 padding:10px;
 border-bottom: 1px solid #3a3838;
+
+}
+
+h1 {
+
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
 }
 
 .title-blog  {
@@ -140,6 +148,7 @@ background-color: #3a3838;
 border-radius: 50px;
 width: 50%;
 box-shadow: 0px 0px 10px #0fac29;
+padding: 10px 0;
 
 }
 

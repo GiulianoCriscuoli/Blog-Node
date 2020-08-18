@@ -1,10 +1,10 @@
-# Projeto: BlogNode
+# Projeto: Node Blog
 
  ![](gifs/blognode.png)
 
 # Descrição
 
-Blog Node é um projeto pessoal, com um sistema de CRUD nas postagens, filtros de buscas por tags e upload de imagens. O projeto está em atualização constante. A próxima etapa será um sistema de login de usuários.
+Node Blog é um projeto pessoal, com um sistema de CRUD nas postagens, filtros de buscas por tags e upload de imagens. O projeto está em atualização constante.
 
 
 # Tecnologias Utilizadas
