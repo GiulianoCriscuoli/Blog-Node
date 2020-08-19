@@ -20,6 +20,7 @@ mongoose.connection.on('error', (error) => {
 
 });
 
+mongoose.set('useCreateIndex', true);
 // puxando o model do banco de dados
 
 require('./models/Post');

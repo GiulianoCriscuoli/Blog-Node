@@ -6,23 +6,22 @@
 
 <label>
    Nome:
-    <input type="text" name="name" />
+    <input type="text" name="name" autocomplete="off" required />
 </label>
 
 <label>
     E-mail
-     <input type="email" name="email" />
+     <input type="email" name="email" autocomplete="off"  required />
 </label>
 
 <label>
     Senha
-     <input type="password" name="password" />
+     <input type="password" name="password" required />
 
 </label>
 
 <label>
     <input type="submit" value="Cadastrar" />
 </label>
-
 
 </form>

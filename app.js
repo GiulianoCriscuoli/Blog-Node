@@ -51,10 +51,10 @@ app.use(passport.session());
 // puxando o model Users para fazer a configuração de autenticação
 // passport faz a serialização e a deserialização
 
-const Users = require('./models/Users');
-passport.use(new LocalStrategy(Users.authenticate()));
-passport.serializeUser(Users.serializeUser());
-passport.deserializeUser(Users.deserializeUser());
+const User = require('./models/User');
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // configuração das rotas
 

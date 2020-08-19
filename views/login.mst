@@ -6,12 +6,12 @@
 
 <label>
     E-mail
-     <input type="email" name="email" />
+     <input type="email" name="email" autocomplete="off" required  />
 </label>
 
 <label>
     Senha
-     <input type="password" name="password" />
+     <input type="password" name="password" autocomplete="off" required />
 
 </label>
 

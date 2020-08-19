@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { response } = require('express');
 const Post = mongoose.model("Post");
 
 // as funções que mexem com banco de dados precisam ser async

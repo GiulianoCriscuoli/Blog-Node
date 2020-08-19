@@ -9,6 +9,12 @@ const userController = require('../controllers/userController');
 
 router.get('/', homeController.index);
 
+router.get('/users/register', userController.register);
+router.post('/users/register', userController.registerAction);
+
+router.get('/users/login', userController.login);
+router.post('/users/login', userController.loginAction);
+
 router.get('/post/add', postController.add);
 router.post('/post/add', 
     imageMiddleware.upload,
@@ -26,13 +32,5 @@ router.post('/post/:slug/edit',
 router.get('/post/:slug/delete', postController.delete);
 
 router.get('/post/:slug', postController.view);
-
-router.get('/users/register', userController.register);
-router.post('/users/register', userController.registerAction);
-
-router.get('/users/login', userController.login);
-router.get('/users/login', userController.loginAction);
-
-
 
 module.exports = router;
