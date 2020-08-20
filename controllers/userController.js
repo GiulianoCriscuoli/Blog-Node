@@ -18,6 +18,8 @@ exports.loginAction = async(req, res) => {
 
         } 
 
+            req.login(result, () => {});
+
             req.flash('success', 'Você foi logado com sucesso!');
             res.redirect('/');
 
@@ -45,4 +47,11 @@ exports.registerAction = async(req, res) => {
         res.redirect('/users/register');
 
     }
+}
+
+exports.logout = (req, res) => {
+
+    req.logout();
+    res.redirect('/');
+
 }

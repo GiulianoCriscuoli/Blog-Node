@@ -58,6 +58,11 @@ text-transform: uppercase;
 display: block;
 }
 
+p {
+
+    color: rgb(224, 220, 220);
+}
+
 .menu-hover:hover {
     color:#0fac29;
     transition: all 0.2s linear;
@@ -112,18 +117,34 @@ background-color: #3a3838;
 max-width:100%;
 
 }
-.title-post {
-
-margin-left: 19px;
-
-}
 
 .title-post .title-hover:hover {
 
-color:#0fac29;
-transition: all 0.2s linear;
+    color:#0fac29;
+    transition: all 0.2s linear;
 
 }
+
+.login-name {
+
+    display: flex;
+    font-size: 18px;
+
+}
+
+.login-name a {
+
+    margin-left: 5px;
+
+}
+
+.login-name a:hover {
+
+    color:#0fac29;
+    transition: all 0.2s linear;
+
+}
+
 .post .body-p p {
     
 color:#FFF;
