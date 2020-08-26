@@ -8,12 +8,6 @@
 
     <h1 class="title-blog"><div class="green">Node</div>Blog</h1>
 
-    {{#user}}
-        <p class="login-name">Olá, {{name}}! <a href="/users/logout">Sair</a></p> 
-    {{/user}}
-
-
-    
     <ul>
 
     {{#h.menu}}

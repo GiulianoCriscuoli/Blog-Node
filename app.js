@@ -50,9 +50,19 @@ app.use(flash());
 // midlewares
 app.use((req, res, next) => {
 
-    res.locals.h = helpers;
+    res.locals.h = { ...helpers };
     res.locals.flashes = req.flash();
     res.locals.user = req.user;
+
+    if(req.isAuthenticated()) {
+
+        res.locals.h.menu = res.locals.h.menu.filter(item => item.logged);
+
+    } else {
+
+        res.locals.h.menu = res.locals.h.menu.filter(item => item.guest);
+    }
+
     next();
 
 });

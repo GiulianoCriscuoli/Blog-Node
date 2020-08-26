@@ -40,7 +40,7 @@ exports.resize = async (req, res, next) => {
     req.body.photo = filename; // manda o file para o corpo
 
     const photo = await jimp.read(req.file.buffer); // lê o arquivo
-    await photo.resize(800, jimp.AUTO); // redimensionando largura e altura
+    await photo.resize(800, 800); // redimensionando largura e altura
     await photo.write(`./public/media/${filename}`); // informando onde será escrito o arquivo
     
     next();

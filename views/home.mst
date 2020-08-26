@@ -21,10 +21,10 @@
     {{/photo}}
     <div class="body-p"><p>{{body}}</div></p>
     <div class="buttons">
+    {{#user}}
     <a href="/post/{{slug}}/edit" class="post-button">Atualizar o post</a>
     <a href="/post/{{slug}}/delete" class="post-button">Excluir</a>
-
-     
+    {{/user}}
 
     </div>
 
