@@ -17,7 +17,7 @@ exports.index =  async (req, res) => {
 
   const postFilter = (typeof responseJson.tag != 'undefined') ? {tags: responseJson.tag}: {};
 
-  const postsPromise = Post.find(postFilter); // find é uma função do mongoDB para listar todos os posts
+  const postsPromise = Post.findPosts(postFilter); // find é uma função do mongoDB para listar todos os posts
   const tagsPromise = Post.getTagsList(); // acessa a lista de tags 
 
   // Faz uma promise e recebe o resultado delas nas variáveis posts e tags

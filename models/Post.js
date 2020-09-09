@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const slug = require('slug'); //função que gera um slug
 
+const objectId = mongoose.Schema.Types.ObjectId; // o objectId do author
+
 mongoose.Promise = global.Promise;
 
 // criando o modelo do banco de dados
@@ -19,7 +21,8 @@ const postSchema = new mongoose.Schema({
         type:String,
         trim:true
     },
-    tags:[String]
+    tags:[String],
+    author: objectId
 
 });
 
@@ -61,6 +64,28 @@ postSchema.statics.getTagsList = function () {
         {$sort: {count: -1}}
 
     ]);
+}
+
+postSchema.statics.findPosts = function (filter = {}) {
+
+    return this.aggregate([
+
+        { $match: filter }, // equivalente a função de find(postFilter)
+        { $lookup: {
+            from: 'users',
+            let: {'author': '$author'},
+            pipeline: [
+                { $match: { $expr: { $eq: ['$$author', '$_id'] } } },
+                { $limit: 1}
+            ],
+            as: 'author'
+        }},
+        { $addFields: {
+
+            'author': { $arrayElemAt: ['$author', 0] }
+        } }
+
+    ])
 }
 
 module.exports = mongoose.model('Post', postSchema);

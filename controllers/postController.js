@@ -20,6 +20,7 @@ exports.add = (req, res) => {
 exports.addAction = async(req, res) => {
 
  req.body.tags = req.body.tags.split(',').map(tag => tag.trim());
+ req.body.author = req.user._id; // recebe o id do user logado
     
  const post = new Post(req.body); // cria o novo post
 

@@ -25,14 +25,17 @@
     <a href="/post/{{slug}}/edit" class="post-button">Atualizar o post</a>
     <a href="/post/{{slug}}/delete" class="post-button">Excluir</a>
     {{/user}}
+    <p>Autor: <small>{{author.name}}</small></p>
 
     </div>
 
-     <h3 class="tag-post">Tags: <small>{{tags}}</small></h3>
+    <h3 class="tag-post">Tags: <small>{{tags}}</small></h3>
+    
+    </div>
+
    
-    </div>
-
 {{/posts}}
+
 
 
 </body>
